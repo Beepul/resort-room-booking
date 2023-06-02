@@ -1,0 +1,56 @@
+@use '../abstracts/var' as *;
+
+/* services */
+.services {
+    padding: 5rem 0;
+  }
+  .services {
+    background: $darkGrey;
+    text-align: center;
+  }
+  .services-center {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 50px;
+  }
+  .service{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .service span {
+    display: grid;
+    place-items: center;
+    color: $primaryColor;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    border: 1px solid #deb66689;
+  }
+  .services h6 {
+    letter-spacing: $mainSpacing;
+    text-transform: capitalize;
+  }
+  .services p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 992px) {
+    .services-center {
+      width: 95vw;
+      max-width: 1170px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .services p {
+      width: 100%;
+    }
+  }
+  /*end of services */

@@ -1,0 +1,89 @@
+@use '../abstracts/var' as *;
+
+/* room */
+.room {
+    box-shadow: $lightShadow;
+    transition: $mainTransition;
+  }
+  
+  .img-container {
+    position: relative;
+    overflow: hidden;
+  }
+  .img-container img {
+    width: 100%;
+    display: block;
+    transition: $mainTransition;
+  }
+  .price-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.337);
+    color: $mainWhite;
+    padding: 0.3rem 0.6rem 0.5rem;
+    border-bottom-right-radius: 1rem;
+    font-size: 0.5rem;
+    text-align: center;
+    transition: $mainTransition;
+  }
+  .price-top h6 {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: $mainSpacing;
+  }
+
+.room:hover{
+    img{
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+  .room-info {
+    padding: 18px 18px;
+    background: $darkGrey;
+    .room-name{
+        text-transform: capitalize;
+        padding: 0.5rem 0;
+        font-weight: 700;
+        letter-spacing: $mainSpacing;
+    }
+    .room-desc{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: rgba(49, 49, 49, 0.852);
+    }
+    a{
+        color: rgba(49, 49, 49, 0.852);
+        font-size: 14px;
+    }
+    .extras{
+        padding-top: 14px;
+            list-style: none;
+            margin-bottom: 14px;
+            .heading{
+                font-weight: 600;
+            }
+            li{
+                line-height: 26px;
+            }
+            .list{
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                color: rgba(49, 49, 49, 0.852);
+                svg{
+                    color: $primaryColor;
+                }
+            }
+    }
+    .room__links{
+        color: $mainWhite;
+        &:hover{
+            color: $primaryColor;
+        }
+    }
+  }
+  /* end of room  */

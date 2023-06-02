@@ -1,0 +1,99 @@
+@use '../abstracts/var' as *;
+
+ /*  rooms fitler*/
+ .filter-container {
+    padding: 5rem 0;
+    label{
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+  .filter-form {
+    width: 60vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 40px;
+    align-items: center;
+  }
+  .form-group {
+    text-transform: capitalize;
+    position: relative;
+  }
+  .form-group label {
+    display: block;
+    letter-spacing: $mainSpacing;
+    margin-bottom: 0.5rem;
+  }
+  .form-control {
+    text-transform: capitalize;
+    padding: 0.6rem;
+    width: 100%;
+    border: 1px solid $primaryColor;
+  }
+  
+
+  .custom-arrow{
+    display: block;
+    background: $mainWhite;
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    top: 55.5%;
+    right: 1.5%;
+    height: 30%;
+    width: 3rem;
+    pointer-events: none;
+    &::before{
+      content: '';
+      position: absolute;
+      border:  2px solid #404145;
+      border-width: 0 2px 2px 0;
+      padding: 4px;
+      transform: translate(-50%,-50%) rotate(45deg);
+      top: 50%;
+      left: 50%;
+    }
+  }
+  .price-control{
+    background-color: red;
+  }
+  .size-inputs {
+    display: flex;
+  }
+  .size-input {
+    width: 40%;
+    padding: 0.2rem;
+    border: 1px solid $primaryColor;
+    border-radius: 0.3rem;
+    margin-right: 0.3rem;
+    padding: 0.5rem;
+  }
+  .form-group:last-child{
+    padding-top: 30px;
+  }
+  .single-extra{
+    display: flex;
+    align-items: center; 
+    gap: 8px;
+  label {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    // margin-left: 0.5rem;
+    margin-bottom: 0 !important;
+  }
+}
+  @media screen and (min-width: 776px) {
+    .filter-form {
+      width: 70vw;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .filter-form {
+      width: 95vw;
+      max-width: 1170px;
+    }
+  }
+  /* end of rooms fitler*/

@@ -1,0 +1,92 @@
+@use '../abstracts/var' as *;
+
+/* Hero */
+.defaultHero,
+.roomsHero {
+    height: 100vh;
+  // min-height: calc(100vh - 66px);
+  background: url("../../images/default.avif") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.roomsHero {
+  background-image: url("../../images/room-2.jpeg");
+  min-height: 60vh;
+}
+/* End of Hero */
+/* Banner */
+.banner {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.197);
+  color: $mainWhite;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: $mainSpacing;
+  height: 100%;
+  // min-height: calc(100vh - 66px);
+  width: 100%;
+  display: grid;
+  place-items: center;
+  .text-con{
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 3rem;
+    backdrop-filter: blur(1.5px);
+    h2{
+        font-family: $title-font;
+        font-size: 42px;
+        margin-bottom: 0.2px;
+    }
+  }
+}
+.banner h1 {
+  font-size: 2.5rem;
+}
+.banner .line {
+  width: 10rem;
+  height: 5px;
+  background: $primaryColor;
+  margin: 1rem auto;
+  border-radius: 36px;
+}
+.banner p {
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 576px) {
+  .text-con {
+    padding: 2rem 3rem;
+  }
+  .banner h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .text-con {
+    padding: 2rem 6rem;
+  }
+  .banner h1 {
+    font-size: 4rem;
+  }
+}
+/* End of Banner */
+/* Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-title h4 {
+  font-size: 2rem;
+  letter-spacing: $mainSpacing;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.section-title div {
+  width: 5rem;
+  height: 5px;
+  margin: 0 auto;
+  background: $primaryColor;
+  border-radius: 36px;
+}
+/* end of Title */
